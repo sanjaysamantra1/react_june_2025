@@ -16,8 +16,8 @@ export default function Categories() {
     return <>
         <div className='container'>
             <div className='row'>
-                {allCategories.map((categoryObj) => {
-                    return <CategoryItem categoryObj={categoryObj} />
+                {allCategories.map((categoryObj,ind) => {
+                    return <CategoryItem categoryObj={categoryObj} key={ind} />
                 })}
             </div>
         </div>
