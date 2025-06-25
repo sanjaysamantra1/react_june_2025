@@ -5,6 +5,7 @@ import Greet from '../greet/Greet';
 import MyModal from '../myModal/MyModal';
 import ConditionalDemo1 from '../conditional_rendering/ConditionalDemo1';
 import ListDemo1 from '../List/ListDemo1';
+import ListDemo2 from '../List/ListDemo2';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -20,7 +21,8 @@ export default function Body() {
         <h3>This Content is from parent component</h3>
       </Greet> */}
       {/* <ConditionalDemo1 /> */}
-      <ListDemo1 />
+      {/* <ListDemo1 /> */}
+      <ListDemo2 />
     </div>
   )
 }
