@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <Categories></Categories>
-      <Carousel />
+      {/* <Categories></Categories>
+      <Carousel /> */}
       <Body />
       <Footer />
     </>
