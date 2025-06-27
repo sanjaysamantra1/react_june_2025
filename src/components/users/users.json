@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Sachin tendulkar",
+        "email": "sachin@gmail.com",
+        "phone": "123123123",
+        "address": "mumbai"
+    },
+    {
+        "id": 2,
+        "name": "Virat Kohli",
+        "email": "virat@gmail.com",
+        "phone": "112233445",
+        "address": "delhi"
+    }
+]
