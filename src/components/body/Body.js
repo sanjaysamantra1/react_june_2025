@@ -37,10 +37,10 @@ export default function Body() {
       {/* <CounterDemo1/> */}
       {/* <CounterDemo2/> */}
       {/* <Users/> */}
-      {/* <ProductList/> */}
+      <ProductList/>
       {/* <StateAssignment1/> */}
       {/* <StateAssignment2/> */}
-      <EmployeeList/>
+      {/* <EmployeeList/> */}
     </div>
   )
 }
