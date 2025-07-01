@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './body.css';
 import Demo1 from '../demo1/Demo1';
 import Greet from '../greet/Greet';
@@ -18,10 +18,15 @@ import EmployeeList from '../employees/EmployeeList';
 import EventDemo1 from '../events/EventDemo1';
 import EventDemo2 from '../events/EventDemo2';
 import PureDemo1 from '../pure_component/PureDemo1';
+import PureDemo2 from '../pure_component/PureDemo2';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
   let msg2 = 'Good Evening';
+
+  const [name, setName] = useState('Sanjay');
+  const [add, setAdd] = useState('Bangalore');
+  const [cars, setCars] = useState(['Tata', 'Honda', 'Maruti'])
 
   return (
     <div className='body'>
@@ -45,7 +50,12 @@ export default function Body() {
       {/* <StateAssignment2/> */}
       {/* <EmployeeList/> */}
       {/* <EventDemo2 /> */}
-      <PureDemo1/>
+      {/* <PureDemo2 /> */}
+      <Greet name={name} />
+
+      <button onClick={() => setName('Sachin')}>updateName</button>
+      <button onClick={() => setAdd('Chennai')} className='mx-2'>updateAdd</button>
+      <button onClick={() => setCars([...cars, 'Hundai'])}>updateCarsArray</button>
     </div>
   )
 }

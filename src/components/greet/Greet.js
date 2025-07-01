@@ -1,8 +1,11 @@
+import React from 'react'
 
-function Greet({ name, msg = 'Good Morning',children }) {
+function Greet({name, msg = 'Good Morning'}) {
     return <>
-        <h2>Hellooooo {name}, {msg}</h2>
-        {children}
+        {console.log('Greet Render...')}
+        <h3>This is Greet Component</h3>
+        <div>Hello {name} , {msg}</div>
     </>
 }
-export default Greet;
+
+export default React.memo(Greet);
