@@ -17,6 +17,7 @@ import StateAssignment2 from '../state/StateAssignment2';
 import EmployeeList from '../employees/EmployeeList';
 import EventDemo1 from '../events/EventDemo1';
 import EventDemo2 from '../events/EventDemo2';
+import PureDemo1 from '../pure_component/PureDemo1';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -39,11 +40,12 @@ export default function Body() {
       {/* <CounterDemo1/> */}
       {/* <CounterDemo2/> */}
       {/* <Users/> */}
-      <ProductList/>
+      {/* <ProductList/> */}
       {/* <StateAssignment1/> */}
       {/* <StateAssignment2/> */}
       {/* <EmployeeList/> */}
       {/* <EventDemo2 /> */}
+      <PureDemo1/>
     </div>
   )
 }
