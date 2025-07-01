@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class CounterDemo1 extends Component {
     name = 'Virat Kohli'; // not a state variable
     constructor(props) {
-        super(props)
+        super(props);    // parent class's(Component) constructor
         this.state = {
             count: 0   // state variable
         }

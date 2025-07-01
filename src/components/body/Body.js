@@ -15,6 +15,8 @@ import Users from '../users/Users';
 import StateAssignment1 from '../state/StateAssignment1';
 import StateAssignment2 from '../state/StateAssignment2';
 import EmployeeList from '../employees/EmployeeList';
+import EventDemo1 from '../events/EventDemo1';
+import EventDemo2 from '../events/EventDemo2';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -41,6 +43,7 @@ export default function Body() {
       {/* <StateAssignment1/> */}
       {/* <StateAssignment2/> */}
       {/* <EmployeeList/> */}
+      {/* <EventDemo2 /> */}
     </div>
   )
 }
