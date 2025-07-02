@@ -19,6 +19,7 @@ import EventDemo1 from '../events/EventDemo1';
 import EventDemo2 from '../events/EventDemo2';
 import PureDemo1 from '../pure_component/PureDemo1';
 import PureDemo2 from '../pure_component/PureDemo2';
+import Employee_crud from '../employees/Employee_crud';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -51,11 +52,11 @@ export default function Body() {
       {/* <EmployeeList/> */}
       {/* <EventDemo2 /> */}
       {/* <PureDemo2 /> */}
-      <Greet name={name} />
-
+      {/* <Greet name={name} />
       <button onClick={() => setName('Sachin')}>updateName</button>
       <button onClick={() => setAdd('Chennai')} className='mx-2'>updateAdd</button>
-      <button onClick={() => setCars([...cars, 'Hundai'])}>updateCarsArray</button>
+      <button onClick={() => setCars([...cars, 'Hundai'])}>updateCarsArray</button> */}
+      <Employee_crud></Employee_crud>
     </div>
   )
 }
