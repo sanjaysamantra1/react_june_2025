@@ -14,8 +14,18 @@ export default function Employee_crud() {
     setSelectedEmployee({ ...currentEmp });
     setIsOpen(true);
   }
-  function closeModal() {
+  const closeModal = () => {
     setIsOpen(false);
+  }
+  const deleteEmployee = (empIdToDelete) => {
+    const deleteFlag = window.confirm('Are You Sure to delete the employee');
+    if (deleteFlag) {
+      let employeesAfterDelete = employees.filter(emp => emp.eId !== empIdToDelete);
+      setEmployees([...employeesAfterDelete]);
+    }
+  }
+  const addEmployee = (empToAdd) => {
+    setEmployees([...employees, empToAdd]);
   }
 
   return <>
@@ -25,13 +35,28 @@ export default function Employee_crud() {
       </div>
       <div className='row border'>
         <div className='col-sm-8'>
-          <EmployeeTable employees={employees} openModal={openModal}>
+          <EmployeeTable employees={employees} openModal={openModal}
+            deleteEmployee={deleteEmployee}>
           </EmployeeTable>
         </div>
         <div className='col-sm-4'>
-          <EmployeeAdd></EmployeeAdd>
+          <EmployeeAdd addEmployee={addEmployee}></EmployeeAdd>
         </div>
       </div>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+      >
+        <button onClick={closeModal}>close</button>
+
+        <h2>Selected Employee:</h2>
+        <div>eId : {selectedEmployee.eId}</div>
+        <div>name : {selectedEmployee.name}</div>
+        <div>Gender : {selectedEmployee.gender}</div>
+        <div>Salary : {selectedEmployee.sal}</div>
+      </Modal>
     </div>
   </>
 }

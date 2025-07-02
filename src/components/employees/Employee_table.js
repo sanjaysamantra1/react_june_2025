@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function EmployeeTable({ employees,openModal }) {
+export default function EmployeeTable({ employees, openModal, deleteEmployee }) {
   return <>
+    <h4>Employee Table</h4>
     <table className='table table-bordered table striped mt-2'>
       <tbody>
         {employees.map(emp => {
@@ -11,8 +12,8 @@ export default function EmployeeTable({ employees,openModal }) {
             <td>{emp.sal}</td>
             <td>{emp.gender}</td>
             <td>
-              <button className='btn btn-primary mx-1' onClick={()=>openModal(emp)}>View</button>
-              <button className='btn btn-danger mx-1'>Delete</button>
+              <button className='btn btn-primary mx-1' onClick={() => openModal(emp)}>View</button>
+              <button className='btn btn-danger mx-1' onClick={() => deleteEmployee(emp.eId)}>Delete</button>
             </td>
           </tr>
         })}
