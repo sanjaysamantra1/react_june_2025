@@ -23,6 +23,8 @@ import Employee_crud from '../employees/Employee_crud';
 import UseEffectDemo1 from '../hooks/UseEffectDemo1';
 import UseRefDemo1 from '../hooks/UseRefDemo1';
 import FormDemo1 from '../form/FormDemo1';
+import UseMemoDemo1 from '../hooks/UseMemoDemo1';
+import UseCallbackParent from '../hooks/UseCallbackParent';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -61,8 +63,10 @@ export default function Body() {
       <button onClick={() => setCars([...cars, 'Hundai'])}>updateCarsArray</button> */}
       {/* <Employee_crud></Employee_crud> */}
       {/* <UseEffectDemo1 /> */}
-      <UseRefDemo1/>
-      <FormDemo1/>
+      {/* <UseRefDemo1/> */}
+      {/* <FormDemo1/> */}
+      {/* <UseMemoDemo1/> */}
+      <UseCallbackParent/>
     </div>
   )
 }

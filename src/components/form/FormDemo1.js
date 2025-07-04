@@ -4,6 +4,11 @@ export default function FormDemo1() {
     const [num1, setNum1] = useState(0);
     const [num2, setNum2] = useState(0);
 
+    const sayHello = () => {
+        console.log('Hellooooooooooooooooo')
+    }
+    sayHello();
+    
     const changeHandler = (e) => {
         const fieldName = e.target.name;
         const fieldValue = e.target.value;
