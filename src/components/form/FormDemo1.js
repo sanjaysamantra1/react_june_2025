@@ -13,9 +13,7 @@ export default function FormDemo1() {
             setNum2(fieldValue)
         }
         console.log('change Handler');
-        console.log(`Addition of ${num1} & ${num2} is ${+num1 + +num2}`)
     }
-
     return <>
         <h3>Let's Learn Controlled form</h3>
         <form className='border border-3 rounded-3 p-3'>
@@ -26,5 +24,7 @@ export default function FormDemo1() {
             <br /><br />
             <button>submit</button>
         </form>
+
+        <p>Addition is: {+num1 + +num2}</p>
     </>
 }
