@@ -21,6 +21,8 @@ import PureDemo1 from '../pure_component/PureDemo1';
 import PureDemo2 from '../pure_component/PureDemo2';
 import Employee_crud from '../employees/Employee_crud';
 import UseEffectDemo1 from '../hooks/UseEffectDemo1';
+import UseRefDemo1 from '../hooks/UseRefDemo1';
+import FormDemo1 from '../form/FormDemo1';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -58,7 +60,9 @@ export default function Body() {
       <button onClick={() => setAdd('Chennai')} className='mx-2'>updateAdd</button>
       <button onClick={() => setCars([...cars, 'Hundai'])}>updateCarsArray</button> */}
       {/* <Employee_crud></Employee_crud> */}
-      <UseEffectDemo1 />
+      {/* <UseEffectDemo1 /> */}
+      <UseRefDemo1/>
+      <FormDemo1/>
     </div>
   )
 }
