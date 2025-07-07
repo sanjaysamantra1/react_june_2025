@@ -25,6 +25,7 @@ import UseRefDemo1 from '../hooks/UseRefDemo1';
 import FormDemo1 from '../form/FormDemo1';
 import UseMemoDemo1 from '../hooks/UseMemoDemo1';
 import UseCallbackParent from '../hooks/UseCallbackParent';
+import FormDemo2 from '../form/FormDemo2';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -66,7 +67,8 @@ export default function Body() {
       {/* <UseRefDemo1/> */}
       {/* <FormDemo1/> */}
       {/* <UseMemoDemo1/> */}
-      <UseCallbackParent/>
+      {/* <UseCallbackParent/> */}
+      <FormDemo2/>
     </div>
   )
 }
