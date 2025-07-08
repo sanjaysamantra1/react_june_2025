@@ -98,7 +98,7 @@ export default function FormDemo2() {
                         </form>
 
                         <pre>
-                            {JSON.stringify(formData)}
+                            {JSON.stringify(formData,null,4)}
                         </pre>
                     </div>
                 </div>
