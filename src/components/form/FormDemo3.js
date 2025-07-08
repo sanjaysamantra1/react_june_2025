@@ -41,36 +41,36 @@ export default function FormDemo3() {
                 >
                     {({ values, isSubmitting }) => (
                         <Form>
-                            <div>
+                            <div className='my-1'>
                                 <label>Name:</label>
                                 <Field name="name" type="text" />
-                                <div className="error"><ErrorMessage name="name" /></div>
+                                <div className="text-danger"><ErrorMessage name="name" /></div>
                             </div>
-                            <div>
+                            <div className='my-1'>
                                 <label>Email:</label>
                                 <Field name="email" type="email" />
-                                <div className="error"><ErrorMessage name="email" /></div>
+                                <div className="text-danger"><ErrorMessage name="email" /></div>
                             </div>
-                            <div>
+                            <div className='my-1'>
                                 <label>Password:</label>
                                 <Field name="password" type="password" />
-                                <div className="error"><ErrorMessage name="password" /></div>
+                                <div className="text-danger"><ErrorMessage name="password" /></div>
                             </div>
-                            <div>
+                            <div className='my-1'>
                                 <label>Confirm Password:</label>
                                 <Field name="confirmPassword" type="password" />
-                                <div className="error"><ErrorMessage name="confirmPassword" /></div>
+                                <div className="text-danger"><ErrorMessage name="confirmPassword" /></div>
                             </div>
-                            <div>
+                            <div className='my-1'>
                                 <label>Gender:</label>
                                 <Field as="select" name="gender">
                                     <option value="">Select</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </Field>
-                                <div className="error"><ErrorMessage name="gender" /></div>
+                                <div className="text-danger"><ErrorMessage name="gender" /></div>
                             </div>
-                            <div>
+                            <div className='my-1'>
                                 <label>Role:</label>
                                 <label>
                                     <Field type="radio" name="role" value="developer" />
@@ -80,9 +80,9 @@ export default function FormDemo3() {
                                     <Field type="radio" name="role" value="designer" />
                                     Designer
                                 </label>
-                                <div className="error"><ErrorMessage name="role" /></div>
+                                <div className="text-danger"><ErrorMessage name="role" /></div>
                             </div>
-                            <div>
+                            <div className='my-1'>
                                 <label>Skills:</label>
                                 {skillsList.map((skill) => (
                                     <label key={skill} style={{ display: "block" }}>
@@ -94,14 +94,14 @@ export default function FormDemo3() {
                                         {skill}
                                     </label>
                                 ))}
-                                <div className="error"><ErrorMessage name="skills" /></div>
+                                <div className="text-danger"><ErrorMessage name="skills" /></div>
                             </div>
-                            <div>
+                            <div className='my-1'>
                                 <label>
                                     <Field type="checkbox" name="acceptTerms" />
                                     I accept the terms and conditions
                                 </label>
-                                <div className="error"><ErrorMessage name="acceptTerms" /></div>
+                                <div className="text-danger"><ErrorMessage name="acceptTerms" /></div>
                             </div>
                             <button type="submit" disabled={isSubmitting} style={{ marginTop: "10px" }}>
                                 Submit
