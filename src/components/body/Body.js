@@ -27,6 +27,9 @@ import UseMemoDemo1 from '../hooks/UseMemoDemo1';
 import UseCallbackParent from '../hooks/UseCallbackParent';
 import FormDemo2 from '../form/FormDemo2';
 import FormDemo3 from '../form/FormDemo3';
+import HttpDemo1 from '../http/HttpDemo1';
+import HttpDemo2 from '../http/HttpDemo2';
+import HttpDemo3 from '../http/HttpDemo3';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -71,6 +74,7 @@ export default function Body() {
       {/* <UseCallbackParent/> */}
       {/* <FormDemo2/> */}
       {/* <FormDemo3 /> */}
+      <HttpDemo3 />
     </div>
   )
 }
