@@ -31,6 +31,9 @@ import HttpDemo1 from '../http/HttpDemo1';
 import HttpDemo2 from '../http/HttpDemo2';
 import HttpDemo3 from '../http/HttpDemo3';
 import HttpDemo4 from '../http/HttpDemo4';
+import ToDoList from '../http/TodoList';
+import PostList from '../http/PostList';
+import HttpDemo5 from '../http/HttpDemo5';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -75,7 +78,10 @@ export default function Body() {
       {/* <UseCallbackParent/> */}
       {/* <FormDemo2/> */}
       {/* <FormDemo3 /> */}
-      <HttpDemo4 />
+      {/* <HttpDemo4 /> */}
+      {/* <ToDoList/> */}
+      {/* <PostList/> */}
+      <HttpDemo5/>
     </div>
   )
 }
