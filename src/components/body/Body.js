@@ -34,6 +34,7 @@ import HttpDemo4 from '../http/HttpDemo4';
 import ToDoList from '../http/TodoList';
 import PostList from '../http/PostList';
 import HttpDemo5 from '../http/HttpDemo5';
+import CounterDemo3 from '../state/CounterDemo3';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -58,7 +59,8 @@ export default function Body() {
       {/* <UserList /> */}
       {/* <StateDemo1/> */}
       {/* <CounterDemo1/> */}
-      {/* <CounterDemo2/> */}
+      <CounterDemo2/>
+      <CounterDemo3/>
       {/* <Users/> */}
       {/* <ProductList/> */}
       {/* <StateAssignment1/> */}
@@ -81,7 +83,7 @@ export default function Body() {
       {/* <HttpDemo4 /> */}
       {/* <ToDoList/> */}
       {/* <PostList/> */}
-      <HttpDemo5/>
+      {/* <HttpDemo5/> */}
     </div>
   )
 }
