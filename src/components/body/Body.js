@@ -35,6 +35,11 @@ import ToDoList from '../http/TodoList';
 import PostList from '../http/PostList';
 import HttpDemo5 from '../http/HttpDemo5';
 import CounterDemo3 from '../state/CounterDemo3';
+import { Route, Routes } from 'react-router-dom';
+import Home from '../routing/Home';
+import Aboutus from '../routing/Aboutus';
+import Careers from '../routing/Careers';
+import NotFound from '../routing/NotFound';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -59,8 +64,8 @@ export default function Body() {
       {/* <UserList /> */}
       {/* <StateDemo1/> */}
       {/* <CounterDemo1/> */}
-      <CounterDemo2/>
-      <CounterDemo3/>
+      {/* <CounterDemo2/>
+      <CounterDemo3/> */}
       {/* <Users/> */}
       {/* <ProductList/> */}
       {/* <StateAssignment1/> */}
@@ -84,6 +89,15 @@ export default function Body() {
       {/* <ToDoList/> */}
       {/* <PostList/> */}
       {/* <HttpDemo5/> */}
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/aboutus" element={<Aboutus />} />
+        <Route exact path="/careers" element={<Careers />} />
+        <Route exact path="/users" element={<UserList />} />
+        <Route exact path="/products" element={<ProductList />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   )
 }

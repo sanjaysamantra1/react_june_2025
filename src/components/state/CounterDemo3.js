@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import CounterHOC from '../hoc/CounterHOC';
+import LoggerHOC from '../hoc/LoggerHOC';
 
 function CounterDemo3(props) {
     // const [count, setCount] = useState(0);
@@ -13,4 +14,5 @@ function CounterDemo3(props) {
     </div>
 }
 
-export default CounterHOC(CounterDemo3);
+export default LoggerHOC(CounterHOC(CounterDemo3));
+
