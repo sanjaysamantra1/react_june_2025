@@ -2,8 +2,18 @@ import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import productsArr from './products.json';
 import "./productlist.css"
+import { createSearchParams, useNavigate } from 'react-router-dom';
 
 export default function ProductList() {
+
+    const navigate = useNavigate();
+    const navigateHandler = (title, price, category) => {
+        navigate({
+            pathname: "/productdetails",
+            search: `?${createSearchParams({ title, price, category })}`,
+        });
+    };
+
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 4;
 
@@ -39,6 +49,9 @@ export default function ProductList() {
                                     <i className="bi bi-star-fill" style={{ color: "gold" }}></i>
                                     ({product.rating.count})
                                 </p>
+                                <button className="btn btn-secondary" onClick={() => {
+                                    navigateHandler(product.title, product.price, product.category);
+                                }}>View</button>
                             </div>
                         </div>
                     </div>

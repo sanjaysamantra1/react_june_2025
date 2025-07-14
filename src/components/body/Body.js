@@ -40,6 +40,8 @@ import Home from '../routing/Home';
 import Aboutus from '../routing/Aboutus';
 import Careers from '../routing/Careers';
 import NotFound from '../routing/NotFound';
+import UserDetails from '../routing/UserDetails';
+import ProductDetails from '../routing/ProductDetails';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -95,7 +97,9 @@ export default function Body() {
         <Route exact path="/aboutus" element={<Aboutus />} />
         <Route exact path="/careers" element={<Careers />} />
         <Route exact path="/users" element={<UserList />} />
+        <Route exact path="/userdetails/:id" element={<UserDetails />} />
         <Route exact path="/products" element={<ProductList />} />
+        <Route exact path="/productdetails" element={<ProductDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

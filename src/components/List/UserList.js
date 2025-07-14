@@ -1,6 +1,7 @@
 import React from 'react';
 // import userArr from './users.json';
 import userArr from './users.js';
+import { Link } from 'react-router-dom';
 
 export default function UserList() {
     return <>
@@ -15,6 +16,9 @@ export default function UserList() {
                         <td>{user.email}</td>
                         <td>{user.phone}</td>
                         <td>{user.address.city}</td>
+                        <td>
+                            <Link to={`/userdetails/${user.id}`}> View</Link>
+                        </td>
                     </tr>
                 })}
             </tbody>
