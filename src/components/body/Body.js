@@ -6,7 +6,7 @@ import MyModal from '../myModal/MyModal';
 import ConditionalDemo1 from '../conditional_rendering/ConditionalDemo1';
 import ListDemo1 from '../List/ListDemo1';
 import ListDemo2 from '../List/ListDemo2';
-import UserList from '../List/UserList';
+
 import StateDemo1 from '../state/StateDemo1';
 import CounterDemo1 from '../state/CounterDemo1';
 import CounterDemo2 from '../state/CounterDemo2';
@@ -45,6 +45,8 @@ import ProductDetails from '../routing/ProductDetails';
 import PermanentJobs from '../routing/PermanentJobs';
 import ContractJobs from '../routing/ContractJobs';
 import ProtectedRoute from '../routing/ProtectedRoute';
+import { Suspense } from 'react';
+const UserList = React.lazy(() => import('../List/UserList'));
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -103,11 +105,13 @@ export default function Body() {
           <Route exact path="permanent" element={<PermanentJobs />} />
           <Route exact path="contract" element={<ContractJobs />} />
         </Route>
-        <Route exact path="/users" element={<UserList />} />
+        <Route exact path="/users" element={<Suspense fallback={<div>Loading...</div>}>
+     <UserList />
+ </Suspense>} />
         <Route exact path="/userdetails/:id" element={<UserDetails />} />
         <Route exact path="/products" element={
           <ProtectedRoute>
-             <ProductList />
+            <ProductList />
           </ProtectedRoute>
         } />
         <Route exact path="/productdetails" element={<ProductDetails />} />
