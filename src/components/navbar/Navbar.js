@@ -3,6 +3,7 @@ import {  NavLink } from 'react-router-dom';
 import './Navbar.css'
 
 function Navbar() {
+    const role = 'student';
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">

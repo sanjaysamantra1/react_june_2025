@@ -42,6 +42,9 @@ import Careers from '../routing/Careers';
 import NotFound from '../routing/NotFound';
 import UserDetails from '../routing/UserDetails';
 import ProductDetails from '../routing/ProductDetails';
+import PermanentJobs from '../routing/PermanentJobs';
+import ContractJobs from '../routing/ContractJobs';
+import ProtectedRoute from '../routing/ProtectedRoute';
 
 export default function Body() {
   let msg1 = 'Good Afternoon';
@@ -49,7 +52,7 @@ export default function Body() {
 
   const [name, setName] = useState('Sanjay');
   const [add, setAdd] = useState('Bangalore');
-  const [cars, setCars] = useState(['Tata', 'Honda', 'Maruti'])
+  const [cars, setCars] = useState(['Tata', 'Honda', 'Maruti']);
 
   return (
     <div className='body'>
@@ -95,10 +98,18 @@ export default function Body() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/aboutus" element={<Aboutus />} />
-        <Route exact path="/careers" element={<Careers />} />
+        <Route exact path="/careers" element={<Careers />} >
+          <Route index element={<PermanentJobs />} />
+          <Route exact path="permanent" element={<PermanentJobs />} />
+          <Route exact path="contract" element={<ContractJobs />} />
+        </Route>
         <Route exact path="/users" element={<UserList />} />
         <Route exact path="/userdetails/:id" element={<UserDetails />} />
-        <Route exact path="/products" element={<ProductList />} />
+        <Route exact path="/products" element={
+          <ProtectedRoute>
+             <ProductList />
+          </ProtectedRoute>
+        } />
         <Route exact path="/productdetails" element={<ProductDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
