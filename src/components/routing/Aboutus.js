@@ -20,5 +20,6 @@ export default function Aboutus() {
         <MyErrorBoundary>
             <BuggyCounter />
         </MyErrorBoundary>
+        <hr />
     </>
 }
